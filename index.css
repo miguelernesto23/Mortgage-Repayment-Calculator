@@ -1,0 +1,226 @@
+:root {
+
+  --white: hsl(0, 0%, 100%);
+  --Slate100: hsl(202, 86%, 94%);
+  --Slate300: hsl(203, 41%, 72%);
+  --Slate500: hsl(200, 26%, 54%);
+  --Slate700: hsl(200, 24%, 40%);
+  --Slate900: hsl(202, 55%, 16%);
+  --Lime: hsl(61, 70%, 52%);
+  --Red: hsl(4, 69%, 50%);
+}
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+body{
+    background-color: var(--Slate100);
+}
+.container-main{
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    margin-top:20px ;
+    width: 800px;
+    display: flex;
+    background-color: white;
+    border-radius:15px 10px 10px 15px
+}
+.container-calculator{
+    background-color: transparent;
+    padding: 20px;
+    width: 90%;
+    
+}
+.container-result{
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background-color: hsl(202, 55%, 16% , 0.970);
+      border-radius:0px 10px 10px 60px
+}
+.container-title{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.title{
+    font-weight: 700;
+}
+#clearAll{
+    background-color: transparent;
+    border: none;
+    color: var(--Slate500);
+    text-decoration: underline;
+}
+.container-mortgage_amount ,.container-term ,.container-interest{
+    display: flex;
+    flex-direction: column;
+}
+.container-term_interest{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.container-mount-icons{
+    display: flex;
+    justify-content: flex-start;
+    border: 0.5px solid var(--Slate700);
+    border-radius: 5px;
+    width: 95%;
+}
+#input-mount{
+    border: none;
+    width: 95%;
+      cursor: pointer;
+}
+.container-icons{
+    display: flex;
+    justify-content: center;
+    border: 0.5px solid var(--Slate700);
+    border-radius: 5px;
+    align-items: center;
+    margin: 0 5px;
+    width: 90%;
+}
+/* inputs css */
+#input-interest ,#input-term{
+    height: 28px;
+    border: none;
+    border-radius: 5px;
+    width: 95%;
+    padding: 0px 4px;
+    cursor: pointer;
+}
+#input-interest:focus , #input-term:focus ,#input-mount:focus{
+    border:none;
+    outline: none;
+}
+/* Iconos en los inputs */
+.span-icons{
+    border-radius: 5px;
+    font-size: smaller;
+    padding: 8px 10px;
+    background-color: var(--Slate100);
+    color: var(--Slate700);
+}
+/* Labels css color */
+label ,.title-container-type{
+    color: var(--Slate500
+    );
+}
+label , #input-mount ,.span-error{
+    margin: 5px;
+}
+.span-error{
+    font-size: small;
+    color: red;
+    
+}
+.button-container-type{
+    margin-top: 10px;
+}
+.title-container-type{
+    margin: 5px 0px;
+}
+.containers-mortgage{
+ padding: 6px;
+ border-radius:5px ;
+ cursor: pointer;
+ border: 1px solid var(--Slate500);
+ margin: 5px 0;
+}
+.containers-mortgage:hover{
+    border: 1px solid var(--Lime);
+}
+.inputs-mortgage{
+   color: var(--Slate900);
+   font-weight: 500;
+}
+.inputs-chexbox{
+    width: 15px;
+}
+.button-container-type{
+    background-color: var(--Lime);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    margin: 15px 0px;
+}
+#imagen-button{
+    width: 16px;
+    margin: 0px 8px;
+}
+/* Segundo contenedor */
+.container-result {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container-result-null{
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+#imagen-calculator-result{
+    width: 200px;
+}
+.text-title-reult{
+  color: white;
+  margin: 5px 0;
+}
+.paragrap-result{
+color: hsla(203, 41%, 72%, 0.800);
+font-size: 12px;
+text-align: center;
+}
+.container-result-amount{
+padding: 20px;
+display: none;
+}
+.paragrap-result{
+  width: small;
+  text-align: start;
+  color: hsla(203, 41%, 72%, 0.800);
+}
+#text-title{
+    color:white;
+}
+.container-main-result{
+    border-top: 4px solid var(--Lime);
+    border-radius: 6px;
+    padding: 5px 20px 20px 20px;
+    background-color:hsl(201, 64%, 11%);
+}
+#span_montyrepayments {
+    color: var(--Lime);
+    font-size: 35px;
+       font-family: 500;
+}
+#span_repayover{
+    font-family: 500;
+    font-size: 20px;
+    color: white;
+}
+.text-h4-result{
+    color: rgba(255, 255, 255, 0.700);
+    margin-bottom: 10px;
+}
+.linea{
+  border: 1px solid rgba(255, 255, 255, 0.200);
+  margin: 25px 0;
+  
+}
+/* Media Query */
+@media (width<= 376px) { 
+.container-main{
+    display: flex;
+    flex-direction: column;
+}
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage repayment Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./assets/images/icon-calculator.svg">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Halant:wght@300;400;500;600;700&family=Josefin+Sans:wght@100&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <di class="container-main">
+        <div class="container-calculator">
+          <div class="container-title">
+            <h3 class="title">Mortgage Calculator</h3>
+            <button id="clearAll" type="button">Clear All</button>
+          </div>
+          <div class="container-amount">
+            <form action="">
+              <!-- Contenedor del Primer Input -->
+              <div class="container-mortgage_amount">
+                <label for="input-mount" class="text-label "
+                  >Mortgage Amount</label
+                >
+                <div class="container-mount-icons error">
+                  <span class="span-icons error-form">£</span>
+                  <input type="text" id="input-mount" class="input_value"/>
+                </div>
+                <span class="span-error"></span>
+              </div>
+              <!-- Contenedor de los segundos inputs -->
+              <div class="container-term_interest">
+                <div class="container-term">
+                  <label for="input-term" class="text-label">
+                    Mortgage Term</label
+                  >
+                  <div class="container-icons error">
+                    <input type="text" id="input-term" class="input_value"/>
+                    <span class="span-icons error-form">years</span>
+                  </div>
+                  <span class="span-error"></span>
+                </div>
+                <div class="container-interest">
+                  <label for="input-interest" class="text-label"
+                    >Interest Rate</label
+                  >
+                  <!-- Contenedor de iconos en los inputs -->
+                  <div class="container-icons error">
+                    <input type="text" id="input-interest" class="input_value"/>
+                    <span class="span-icons error-form">%</span>
+                  </div>
+                  <span class="span-error"></span>
+                </div>
+              </div>
+              <!-- Contenedor de los input Chexbox -->
+              <div class="mortgage-type">
+                <label class="title-container-type" class="text"
+                  >Mortgage Type</label
+                >
+                <div class="container-type">
+                  <div class="container-repayment containers-mortgage">
+                    <input
+                      type="radio"
+                      name=""
+                      id="input-repayment"
+                      class="inputs-chexbox "
+                    />
+                    <label for="input-repayment" class="inputs-mortgage"
+                      >Repayment</label
+                    >
+                  </div>
+                  <div class="container-interes-onlyt containers-mortgage">
+                    <input
+                      type="radio"
+                      name=""
+                      id="input-interestonly"
+                      class="inputs-chexbox "
+                    />
+                    <label for="input-interestonly" class="inputs-mortgage">
+                      Interest Only</label
+                    >
+                  </div>
+                  <span class="span-error"></span>
+                </div>
+              </div>
+              <button
+                class="button-container-type"
+                id="button_action"
+                type="button"
+              >
+                <img
+                  src="./assets/images/icon-calculator.svg"
+                  alt="imagen-calculadora"
+                  id="imagen-button"
+                />
+                Calculate Repayments
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="container-result">
+          <div class="container-result-null" id="invalid-result">
+            <img
+              src="./assets/images/illustration-empty.svg"
+              alt=""
+              id="imagen-calculator-result"
+            />
+            <h3 class="text-title-reult">Results shown here</h3>
+            <p class="paragrap-result">
+              Complete the form and click “calculate repayments” to see what
+              your monthly repayments would be.
+            </p>
+          </div>
+          <div class="container-result-amount " id="mostrar-result">
+            <h3 id="text-title">You Results</h3>
+            <p class="paragrap-result">
+              Your results are shown below based on the information you
+              provided. To adjust the results, edit the form and click
+              “calculate repayments” again.
+            </p>
+            <div class="container-main-result" >
+            <div>
+              <h4 class="text-h4-result">Your monthly repayments</h4>
+              <span id="span_montyrepayments"><span>£</span ><span id="result_one"></span></span>
+            </div>
+            <div class="linea"></div>
+            <div>
+              <h4 class="text-h4-result">Total you'll repay over the term</h4>
+              <span id="span_repayover">
+                <span>£</span >
+                <span id="result_two"></span>
+              </span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </di>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
